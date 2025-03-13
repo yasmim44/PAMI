@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 1</title>
+</head>
+<body>
+    <button onclick="aumentarFonte()">Aumentar fonte</button>
+    <button onclick="reduzirFonte()">Reduzir fonte</button>
+    <button onclick="dizerOla()">Diga Ola!</button>
+    <button onclick="aplicarEstilo()">Aplicar estilo</button>
+    <button onclick="aplicarPink()">Aplicar cor rosa</button>
+    <button onclick="aplicarPurple()">Aplicar cor roxa</button>
+    <button onclick="aplicarBlue()">Aplicar cor azul</button>
+    <button onclick="aumentarMargem()">Aumentar margens</button>
+    <button onclick="reduzirMargem()">Reduzir margens</button>
+    <h1>Etec Sales Gomes</h1>
+
+    <script>
+        let font_size = 12;
+        let titulo = document.querySelector('h1');
+
+        function aplicarPink(){
+            titulo.style.backgroundColor = 'pink';
+        }
+        function aplicarPurple(){
+            titulo.style.backgroundColor = 'purple';
+        }
+        function aplicarBlue(){
+            titulo.style.backgroundColor = 'blue';
+        }
+        let margin_size = 50;
+        function aumentarMargem(){
+            margin_size++;
+            titulo.style.marginTop = margin_size + 'px';
+            // titulo.style.marginLeft = margin_size + 'px';
+            titulo.style.marginLeft = `${font_size}px`;   // jeito mais correto de fazer 
+
+        }
+        function reduzirMargem(){
+            margin_size--;
+            titulo.style.marginTop = margin_size + 'px';
+            titulo.style.marginLeft = margin_size + 'px';
+        }
+
+        function aumentarFonte(){
+            font_size++;
+            titulo.style.fontSize = font_size + 'px';
+            console.log(font_size);
+        }
+        function reduzirFonte(){
+            font_size--;
+             titulo.style.fontSize = font_size + 'px';
+            console.log(font_size);
+        }
+
+        function aplicarSize(){
+            titulo.style.fontSize = font_size + 'px';
+        }
+
+        function dizerOla(){
+            alert('Oláaa!');
+        }
+
+        function aplicarEstilo(){
+            let titulo = document.querySelector('h1');  //querySelector para buscar
+            titulo.style.backgroundColor = 'pink';
+            titulo.style.fontSize = '64px';
+            titulo.style.fontFamily = 'comic Sans MS';
+            console.log(titulo);
+        }
+
+    </script>
+</body>
+</html>
