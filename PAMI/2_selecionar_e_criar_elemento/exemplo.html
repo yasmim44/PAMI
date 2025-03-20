@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionar elementos</title>
+</head>
+<body>
+    <button onclick="addVeiculo1()">Adicionar Fusca</button>
+    <button onclick="addVeiculo2()">Adicionar Ranger</button>
+    <button onclick="addVeiculo3()">Adicionar Kwid</button>
+    <button onclick="addVeiculo4()">Adicionar Onix</button>
+    <div id="estacionamento"></div>
+
+    <script>
+        function addVeiculo1(){
+            let veiculo_1 = document.createElement ('h1');
+            veiculo_1.innerText = 'Fusca';
+            veiculo_1.style.color = 'Fuchsia';
+            veiculo_1.style.backgroundColor = 'pink';
+            veiculo_1.style.fontSize ='20px';
+            veiculo_1.style.fontFamily ='arial';
+    
+            let imagem = document.createElement('img');
+            imagem.setAttribute ('src', 'https://arpine.com.br/cdn/shop/products/Volkswagen-Fusca.jpg?v=1674683393');
+            document.querySelector('#estacionamento').appendChild(veiculo_1);
+            document.querySelector('#estacionamento').appendChild(imagem);
+            document.querySelector('#estacionamento').appendChild(veiculo_1);
+        }
+
+        function addVeiculo2(){
+            let veiculo_2 = document.createElement ('h1');
+            veiculo_2.innerText = 'Ranger';
+            veiculo_2.style.color = 'grey';
+            veiculo_2.style.backgroundColor = 'black';
+            veiculo_2.style.fontSize ='20px';
+            veiculo_2.style.fontFamily ='arial';
+            
+            let imagem = document.createElement('img');
+            imagem.setAttribute ('src', 'https://live.dealer-asset.co/br1001/siteassets/ford-brasil-nova-geracao-ranger-black-preta-02102024.jpg');
+            document.querySelector('#estacionamento').appendChild(veiculo_2);
+            document.querySelector('#estacionamento').appendChild(imagem);
+            document.querySelector('#estacionamento').appendChild(veiculo_2);
+        }
+
+        function addVeiculo3(){
+            let veiculo_3 = document.createElement ('h1');
+            veiculo_3.innerText = 'Kwid';
+            veiculo_3.style.color = 'yellow';
+            veiculo_3.style.backgroundColor = 'orange';
+            veiculo_3.style.fontSize ='20px';
+            veiculo_3.style.fontFamily ='arial';
+
+            let imagem = document.createElement('img');
+            imagem.setAttribute ('src', 'https://production.autoforce.com/uploads/version/profile_image/9942/comprar-kwid-e-tech_a65d0d91d9.png');
+            document.querySelector('#estacionamento').appendChild(veiculo_3);
+            document.querySelector('#estacionamento').appendChild(imagem);
+            document.querySelector('#estacionamento').appendChild(veiculo_3);
+        }
+
+        function addVeiculo4(){
+            let veiculo_4 = document.createElement ('h1');
+            veiculo_4.innerText = 'Onix';
+            veiculo_4.style.color = 'orange';
+            veiculo_4.style.backgroundColor = 'red';
+            veiculo_4.style.fontSize ='20px';
+            veiculo_4.style.fontFamily ='arial';
+            
+            let imagem = document.createElement('img');
+            imagem.setAttribute ('src', 'https://production.autoforce.com/uploads/version/profile_image/9199/model_main_webp_comprar-1-0-mt-pacote-rgd_9e612847ed.png.webp');
+            document.querySelector('#estacionamento').appendChild(veiculo_4);
+            document.querySelector('#estacionamento').appendChild(imagem);
+            document.querySelector('#estacionamento').appendChild(veiculo_4);
+        }
+
+
+    
+       
+
+    </script>
+</body>
+</html>
