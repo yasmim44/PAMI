@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarto dos Horrores</title>
+</head>
+<body>
+    
+    <img src="desligado.png" id="interruptor" onclick="acionarInterruptor()">
+    <img src="lampada desligada.png" id="lampada" onclick="acionarLampada()">
+    <img src="PIUPIU.png" id="Piu" onclick="acionarPiu()">
+
+    <script>
+
+        let acionado = false;
+
+        function acionarInterruptor() {
+            let interruptor = document.querySelector('#interruptor');
+            let body = document.querySelector('body');
+            let piu = document.querySelector('#Piu'); // Agora definindo a variável piu
+
+            if (acionado) {
+                interruptor.setAttribute('src', './desligado.png');
+                body.style.backgroundColor = 'black';
+                piu.setAttribute('src', './PIUPIU.png'); // Alterando a imagem do Piu
+                body.style.backgroundColor = 'black';
+            } else {
+                interruptor.setAttribute('src', './ligado.png');
+                body.style.backgroundColor = 'white';
+                piu.setAttribute('src', './ligadopiu.jpg'); // Alterando a imagem do Piu
+                body.style.backgroundColor = 'white';
+            }
+
+            acionado = !acionado;
+        }
+
+        let ligado = false;
+
+        function acionarLampada(){
+            let lampada = document.querySelector('#lampada');
+            let body = document.querySelector('body'); // Não estava no escopo da função anterior
+
+            if (ligado) {
+                lampada.setAttribute('src', './lampada desligada.png');
+                body.style.backgroundColor = 'black';        
+            } else {
+                lampada.setAttribute('src', './lampada ligada.png');
+                body.style.backgroundColor = 'white';
+            }
+            ligado = !ligado;
+        }
+    </script>
+</body>
+</html>
