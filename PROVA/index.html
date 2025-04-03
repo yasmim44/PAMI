@@ -1,0 +1,22 @@
+<!-- Crie um script em javascript que irá conter um array com números. Requisitos:
+-  declare um array contendo 10 números quaisquer;
+- Utilize Foreach para percorrer o array;
+- Use if else dentro do foreach contar quantos números são iguais a 0, e quantos são diferentes de 0.
+- Exiba a mensagem: "Existem X números iguais a  0 e Y números diferentes de 0".
+
+Cole o código abaixo para realizar a entrega. -->
+
+<script>
+    let numeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    
+
+    numeros.forEach(function(num){
+        if(num  == 0){
+            console.log("Existem" + num + "numeros iguais a zero")
+
+        }else{
+            console.log("E existem" + num + "numeros diferentes de zero")
+        }
+
+    });
+</script>
