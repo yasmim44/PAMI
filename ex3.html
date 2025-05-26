@@ -1,0 +1,17 @@
+<script>
+    let primeiroNome = prompt("Digite seu primeiro nome:");
+    let segundoNome = prompt("Digite seu sobrenome:");
+
+    if (primeiroNome.length >= 3 && segundoNome.length >= 3) {
+        let pessoa = {
+            PrimeiroNome: primeiroNome,
+            SegundoNome: segundoNome,
+            NomeCompleto: primeiroNome + " " + segundoNome
+        };
+
+        console.log("Nome aceito!");
+        console.log(pessoa);
+    } else {
+        console.log("Nome e sobrenome devem ter pelo menos 3 caracteres.");
+    }
+</script>
